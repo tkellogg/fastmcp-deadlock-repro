@@ -24,6 +24,10 @@ If it fails and I kill the client but not the server and re-run with a much lowe
 
 conclusion: maybe the deadlock is in the client and the server is uneffected?
 
+
+The `--tool-concurrency` flag changes the concurrency to not include connecting, one single connection
+serves all threads and only a tool call is made. In my experiments, this doesn't trigger a deadlock issue.
+
 ## Running streamable-http
 
 server:
